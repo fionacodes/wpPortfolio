@@ -14,12 +14,15 @@
 <body <?php body_class(); ?>>
 
 <header>
+  <div class="box-left">
     <h1 class="logo">
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
         <?php bloginfo( 'name' ); ?>
       </a>
     </h1>
+  </div>
 
+  <div class="box-right">
     <div id="toggle" class="button_container">
       <span class="top"></span>
       <span class="middle"></span>
@@ -33,5 +36,6 @@
         )); ?> 
       </nav>
     </div>
+
 </header><!--/.header-->
 

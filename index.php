@@ -23,9 +23,7 @@
         <section class="hero">
 
         <!-- LEFT SIDE  -->
-        <div class="box box-left" style="background: url('<?php echo $image['url'] ?>') no-repeat; background-size: 80%; background-position: center;">
-          <!-- <img src="<?php echo $image['url'] ?>"> -->
-          hi
+        <div class="box box-left" style="background: url('<?php echo $image['url'] ?>') no-repeat; background-size: 80%; background-position: top center;">
         </div> 
 
         <div class="box box-right">

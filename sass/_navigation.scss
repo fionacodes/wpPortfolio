@@ -1,6 +1,8 @@
 .button_container {
   margin: auto;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   right: 40px;
   height: 20px;
   width: 25px;
