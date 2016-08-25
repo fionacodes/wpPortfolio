@@ -23,12 +23,29 @@
         <section class="hero">
 
         <div class="box box-left">
+ 
+          <a href="http://google.ca/"><div class="effect-bubba" style="background: url('<?php echo $image['url'] ?>'); background-position: 100rem 0;background-attachment: fixed; height: 80%; ">
+            <figcaption>
+              <p>+</p>
+            </figcaption> 
+          </div>
+          </a>
 
-        <div style="background: url('<?php echo $image['url'] ?>'); background-position: 100rem 0;background-attachment: fixed; height: 80%;">
-        x
-        </div>
+        </div> <!-- END BOX-LEFT --> 
 
-        </div> 
+<!-- 
+        <div class="grid">
+          <figure class="effect-bubba">
+            <img src="https://unsplash.it/800/1000?random"s/>
+            <figcaption>
+              <h2>Fresh <span>Bubba</span></h2>
+              <p>Bubba likes to appear out of thin air.</p>
+              <a href="#">View more</a>
+            </figcaption>     
+          </figure>
+        </div> -->
+
+
 
         <div class="box box-right">
             <h3><?php the_title(); ?></h3>
@@ -41,25 +58,9 @@
     <?php wp_reset_postdata(); ?>
     <?php endif; ?> <!-- END PORTFOLIO IMAGE LOOP -->
 
-<!-- 
-    <div class="grid">
-      <figure class="effect-bubba">
-        <img src="https://unsplash.it/800/1000?random"s/>
-        <figcaption>
-          <h2>Fresh <span>Bubba</span></h2>
-          <p>Bubba likes to appear out of thin air.</p>
-          <a href="#">View more</a>
-        </figcaption>     
-      </figure>
-    </div> -->
-
-
   <!-- RIGHT SIDE -->
 
-
-      
-
-</section> 
+      </section> 
 <!-- END HERO SECTION -->
 
 </main> <!-- END MAIN SECTION -->
