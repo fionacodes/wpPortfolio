@@ -22,8 +22,12 @@
         <!-- BEGIN HERO SECTION -->
         <section class="hero">
 
-        <!-- LEFT SIDE  -->
-        <div class="box box-left" style="background: url('<?php echo $image['url'] ?>') no-repeat; background-size: 80%; background-position: top center;">
+        <div class="box box-left">
+
+        <div style="background: url('<?php echo $image['url'] ?>'); background-position: 100rem 0;background-attachment: fixed; height: 80%;">
+        x
+        </div>
+
         </div> 
 
         <div class="box box-right">

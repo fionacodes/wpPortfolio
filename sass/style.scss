@@ -37,7 +37,7 @@ body {
 .box {
 	width: 50%;
 	height: 100vh;
-  padding: 0 4rem;
+  padding: 0 7rem;
 }
 
 footer .box {
@@ -50,6 +50,7 @@ footer .box {
   width: 50%;
 	float: left;
 	background: #FFF;
+
 }
 
 .box-right {
@@ -86,10 +87,6 @@ header {
 ///////
 
 .grid {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: 0 auto;
   list-style: none;
   text-align: center;
 }
@@ -259,13 +256,14 @@ figure.effect-bubba:hover p {
     // padding-top: 10rem;
 		width: 100%;
 		position: static;
-    height: 80%;
+    height: 70%;
 	}
 
 	.box-right {
 		float: none;
 		width: 100%;
-    height: 20%;
+    height: 30%;
+
 	}
 }
 
