@@ -1,8 +1,6 @@
-<!-- <footer>
-    <div class="box box-right">
+<footer>
     	<p>Designed and Developed by Fiona &copy; <?php echo date('Y'); ?></p>
-    </div>
-</footer> -->
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
@@ -13,10 +11,23 @@
  g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
  s.parentNode.insertBefore(g,s)}(document,"script"));
 
+// OVERLAY NAVIGATION 
  $('#toggle').click(function() {
     $(this).toggleClass('active');
     $('#overlay').toggleClass('open');
    });
+
+// NAV APPEAR ON SCROLL
+(function($) {          
+    $(document).ready(function(){                    
+        $(window).scroll(function(){                          
+            if ($(this).scrollTop() > 400) {$('.topbar').fadeIn(300);
+            } else {
+                $('.topbar').fadeOut(300);
+            }
+        });
+    });
+})(jQuery);
 </script>
 
 <?php wp_footer(); ?>

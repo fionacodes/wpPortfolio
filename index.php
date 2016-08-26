@@ -1,8 +1,18 @@
 <?php //index.php is the last resort template, if no other templates match ?>
 <?php get_header(); ?>
+ 
 
+<!-- 
+<div class="grid-container">
+    <div class="grid-wrap">
+      <div class="grid-content">
+        <span>Aspect ratio 1:1</span>
+      </div>
+    </div>
+</div>
+ -->
 
-<div class="content">
+<main id="main" class="container">
     <?php 
     $portfolio = new WP_Query(
       array(
@@ -20,47 +30,45 @@
         <?php $image = get_sub_field('image') ?>
 
         <!-- BEGIN HERO SECTION -->
-        <section class="hero">
+        <section>
 
-        <div class="box box-left">
- 
-          <a href="http://google.ca/"><div class="effect-bubba" style="background: url('<?php echo $image['url'] ?>'); background-position: 100rem 0;background-attachment: fixed; height: 80%; ">
-            <figcaption>
-              <p>+</p>
-            </figcaption> 
-          </div>
-          </a>
+        <div class="grid-container">
+            <div class="grid-wrap">
+              <div class="grid-content">
+                <span>
 
-        </div> <!-- END BOX-LEFT --> 
+                <div class="grid">
+                  <figure class="effect-goliath">
+                    <img src="<?php echo $image['url'] ?>" width="100%" alt="img01"/>
+                    <figcaption>
+                      <h2>Nice <span>Lily</span></h2>
+                      <p>View</a>
+                    </figcaption>     
+                  </figure>
+                </div>
+                </span>
 
-<!-- 
-        <div class="grid">
-          <figure class="effect-bubba">
-            <img src="https://unsplash.it/800/1000?random"s/>
-            <figcaption>
-              <h2>Fresh <span>Bubba</span></h2>
-              <p>Bubba likes to appear out of thin air.</p>
-              <a href="#">View more</a>
-            </figcaption>     
-          </figure>
-        </div> -->
+              </div>
+            </div>
+        </div>
 
-
-
-        <div class="box box-right">
-            <h3><?php the_title(); ?></h3>
-              <p><?php the_content(); ?></p>
-            <p><?php the_field('language') ?></p>
-          </div><!-- END PORTFOLIO CONTENT LOOP -->
+        <div class="grid-container">
+            <div class="grid-wrap">
+              <div class="grid-content">
+                <span>
+                <h3><?php the_title(); ?></h3>
+                  <p><?php the_content(); ?></p>
+                <p><?php the_field('language') ?></p>
+                </span>
+              </div>
+            </div>
+        </div>
       <?php endwhile ?> <!-- END IMAGE LOOP --> 
      
     <?php endwhile; ?> <!-- END POSTS LOOP -->
     <?php wp_reset_postdata(); ?>
     <?php endif; ?> <!-- END PORTFOLIO IMAGE LOOP -->
-
-  <!-- RIGHT SIDE -->
-
-      </section> 
+        </section> 
 <!-- END HERO SECTION -->
 
 </main> <!-- END MAIN SECTION -->

@@ -14,15 +14,13 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="box-left">
+  <div class="topbar">
     <h1 class="logo">
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
         <?php bloginfo( 'name' ); ?>
       </a>
     </h1>
-  </div>
 
-  <div class="box-right">
     <div id="toggle" class="button_container">
       <span class="top"></span>
       <span class="middle"></span>
@@ -35,7 +33,26 @@
           'theme_location' => 'primary'
         )); ?> 
       </nav>
-    </div>
+  </div>
+  </div>
+
+
+
+  <div class="hero">
+    <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+      <h2><?php the_title(); ?></h2>
+      <p class="client"><?php the_field('client_name'); ?></p> 
+
+      <div class="shortDesc">
+        <?php the_field('short_desc'); ?>
+      </div>
+
+      <?php the_content(); ?>
+    <?php endwhile; // end of the loop. ?>
+
+    <a href="#main"><img src="wp-content/themes/portfolio/images/arrow.svg" class="arrow"></a>
+  </div>
 
 </header><!--/.header-->
+
 

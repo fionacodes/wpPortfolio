@@ -32,154 +32,249 @@ body {
 	font-size: 1.6rem;
 	font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
+  color: #3D3D3D;
 }
-
-.box {
-	width: 50%;
-	height: 100vh;
-  padding: 0 7rem;
-}
-
-footer .box {
-  height: auto;
-  padding: 1rem 4rem;
-  text-align: right;
-}
-
-.box-left {
-  width: 50%;
-	float: left;
-	background: #FFF;
-
-}
-
-.box-right {
-  width: 50%;
-	float: right;
-	background: #00A2CC;
-}
-
-.content {
-  position: absolute;
-  top: 10vh;
-  width: 100%;
-}
-
+ 
 header {
+  background: #23282D;
+  height: 100vh;
+  h2 {
+    font-size: 6rem;
+    color: #FFF;
+    &:after {
+      content:"";
+      border-top: 5px solid #FFF;
+      margin: 2rem auto;
+      display: block;
+      width: 2rem;
+    }
+  }
+  p {
+    margin: 1rem auto;
+    color: #FFF;
+  }
+}
+
+.topbar {
+  z-index: 100;
   width: 100%;
+  height: 10vh;
   position: fixed;
-  top:0;
+  padding: 0 4rem;
+  display: none;
+  background: #FFF;
+  .logo a {
+    font-size: 2.5rem;
+    color: #222;
+    letter-spacing: -1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.hero {
+  padding: 0 4rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  height: 10vh;
-  z-index: 100;
-
-  .box-left {
-    height: 100%;
-    padding-left: 7rem;
-  }
-  .box-right {
-    height: 100%;
-    position: relative;
+  justify-content: center;
+  flex-direction: column;
+  color: #4E4E4E;
+  .arrow {
+    width: 4rem;
+    margin-top: 15rem;
   }
 }
 
-///////
- 
- .effect-bubba {
-  position: relative;
- }
+.container {
+  max-width: 960px;
+  margin: auto;
+  margin-bottom: 3rem;
+}
 
-.effect-bubba figcaption::before,
-.effect-bubba figcaption::after {
+.grid {
+  position: relative;
+  clear: both;
+  list-style: none;
+  width: 50%;
+  float: left;
+
+}
+
+.grid-right {
+  float: right;
+  width: 50%;
+  background: red;
+}
+
+footer {
+  background: #23282D;
+  padding: 9rem 0;
+  text-align: center;
+  color: #FFF;
+  font-size: 1.4rem;
+  margin-top: 20rem;
+  p{
+    margin: 0;
+  }
+}
+
+/* Common style */
+.grid figure { 
+  float: left;
+  overflow: hidden;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
   position: absolute;
-  top: 30px;
-  right: 30px;
-  bottom: 30px;
-  left: 30px;
-  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+.grid figure h2 span {
+  font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+
+/*-----------------*/
+/***** Goliath *****/
+/*-----------------*/
+
+figure.effect-goliath {
+  background: #df4e4e;
+}
+
+figure.effect-goliath img,
+figure.effect-goliath h2 {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+figure.effect-goliath img {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-goliath h2,
+figure.effect-goliath p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+}
+
+figure.effect-goliath p {
+  text-transform: none;
+  font-size: 90%;
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,50px,0);
+  transform: translate3d(0,50px,0);
 }
 
-.effect-bubba figcaption::before {
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: scale(0,1);
-  transform: scale(0,1);
+figure.effect-goliath:hover img {
+  -webkit-transform: translate3d(0,-80px,0);
+  transform: translate3d(0,-80px,0);
 }
 
-.effect-bubba figcaption::after {
-  border-right: 1px solid #fff;
-  border-left: 1px solid #fff;
-  -webkit-transform: scale(1,0);
-  transform: scale(1,0);
+figure.effect-goliath:hover h2 {
+  -webkit-transform: translate3d(0,-100px,0);
+  transform: translate3d(0,-100px,0);
 }
 
-.effect-bubba p {
-  color: #FFF;
-  font-size: 10rem;
-  position: absolute;
-  opacity: 1;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.15s;
-  transition: opacity 0.15s, transform 0.15s;
-  -webkit-transform: translate3d(0,20px,0);
-  transform: translate3d(0,20px,0);
-}
-
-.effect-bubba:hover figcaption::before,
-.effect-bubba:hover figcaption::after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
-.effect-bubba:hover p {
+figure.effect-goliath:hover p {
   opacity: 1;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
- 
-@media screen and (max-width: 1000px) {
-  section {
-    height: 90vh;
 
-  }
-	.box-left {
-		float: none;
-		display: block;
-		width: 100%;
-		position: static;
-    height: 70%;
-	}
-  
-  .effect-bubba {
-    margin-top: 10rem;
-    &:first-child {
-    margin:0;  
-      
-    }
-  }
 
-	.box-right {
-		float: none;
-		width: 100%;
-    height: 30%;
-	}
-
-  header {
-    .box-left, .box-right {
-      background-color: transparent;
-      margin:0;
-    }
-  }
+.grid-container {
+    float: left;
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    background: #FFF;
 }
-
-@media screen and (max-height: 600px) {
-  // .grid {
-  //   position: relative;
-  //   height: 100%;
-  // }
+.grid-container:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
 }
-
+.grid-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: #000;
+}
+.grid-wrap div {
+   display: table;
+   width: 100%;
+   height: 100%;
+   border: #000 1px solid;
+}
+.grid-wrap span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: #000;
+}
