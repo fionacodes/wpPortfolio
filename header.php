@@ -36,21 +36,14 @@
   </div>
   </div>
 
-
-
   <div class="hero">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
       <h2><?php the_title(); ?></h2>
-      <p class="client"><?php the_field('client_name'); ?></p> 
-
-      <div class="shortDesc">
-        <?php the_field('short_desc'); ?>
-      </div>
 
       <?php the_content(); ?>
     <?php endwhile; // end of the loop. ?>
 
-    <a href="#main"><img src="wp-content/themes/portfolio/images/arrow.svg" class="arrow"></a>
+    <a href="#main" class="hero-arrow"><img src="wp-content/themes/portfolio/images/arrow.svg" class="arrow"></a>
   </div>
 
 </header><!--/.header-->

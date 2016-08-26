@@ -3,7 +3,17 @@ h1, h2, h3 {
 }
 
 h2 {
-	
+	font-size: 3.5rem;
+	padding: 3rem; 
+	text-transform: lowercase;
+	text-align: center;
+	&:after {
+	  content:"";
+	  border-top: 5px solid #EBEBEB;
+	  margin: 2rem auto;
+	  display: block;
+	  width: 2rem;
+	}
 }
 
 a {

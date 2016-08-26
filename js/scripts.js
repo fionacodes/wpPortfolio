@@ -2,6 +2,7 @@
 // Smooth Scroll 
 $(function() {
     $('a').smoothScroll();
+    $('.hero-arrow').smoothScroll({offset: -110});
 });
 
 /*!
