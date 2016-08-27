@@ -20,9 +20,16 @@
         </div>
     </div> <!-- END CONTACT AREA -->
 
+    <!-- BEGIN COPYRIGHT AREA -->
     <div class="copy">
       <p>Designed and Developed by Fiona. &copy; 2016</p>
-    </div>
+
+        <div class="social">
+          <a href="https://github.com/fionacodes" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="http://twitter.com/fionacodes" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://ca.linkedin.com/in/fionah" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </div>  
+    </div> <!-- END COPYRIGHT AREA -->
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
