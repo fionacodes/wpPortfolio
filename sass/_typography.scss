@@ -16,11 +16,26 @@ h2 {
 	}
 }
 
+.about h3 {
+	text-align: center;
+	margin-top: 5rem;
+}
+
 a {
-	color: #BA209B;
+	color: #23282D;
+	font-weight: bold;
 	text-decoration: none;
+	transition: all 0.5s ease;
 	&:hover {
-		color: #D424B1;
+		color: #031627;
+	}
+}
+
+section a {
+	padding-bottom: 2px;
+	border-bottom: #EBEBEB 1px solid;
+	&:hover {
+		border-bottom: #A4C2D7 1px solid;
 	}
 }
 

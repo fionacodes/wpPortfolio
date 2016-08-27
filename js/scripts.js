@@ -2,7 +2,7 @@
 // Smooth Scroll 
 $(function() {
     $('a').smoothScroll();
-    $('.hero-arrow').smoothScroll({offset: -110});
+    $('.navOverlay').smoothScroll({offset: -110});
 });
 
 /*!
