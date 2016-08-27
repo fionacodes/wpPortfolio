@@ -31,12 +31,16 @@ a {
 	}
 }
 
-section a {
+.about a {
 	padding-bottom: 2px;
 	border-bottom: #EBEBEB 1px solid;
 	&:hover {
 		border-bottom: #A4C2D7 1px solid;
 	}
+}
+
+.portfolio a {
+	color: #FFF;
 }
 
 /* paragraphs */

@@ -52,6 +52,7 @@
               <div class="grid-wrap">
                 <div class="grid-content">
                   <span>
+                    <a href="<?php the_field('portfolio_url') ?>" target="_blank">
                     <div class="grid">
                       <figure class="effect-hover">
                         <img src="<?php echo $image['url'] ?>" alt="<?php the_field('portfolio_name') ?> project"/>
@@ -59,6 +60,7 @@
                           <p>view <?php the_field('portfolio_name') ?> live</a>
                         </figcaption>     
                       </figure>
+                      </a>
                     </div>
                   </span>
                 </div>
